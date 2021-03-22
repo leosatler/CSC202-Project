@@ -1,5 +1,7 @@
 package csc202project;
 
+import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -10,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+
 
 
 
@@ -33,8 +37,12 @@ public class ProjectGUI extends JFrame implements ActionListener{
 	this.setTitle("Bidding Wars");
 	this.setSize(720,400);
 	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 	this.add(panel);
 	this.setIconImage(imageIcon.getImage());
+	panel.setBackground(Color.PINK);
+	
+	
 	panel.setLayout(null);
 	
 	
@@ -57,6 +65,7 @@ public class ProjectGUI extends JFrame implements ActionListener{
 	panel.add(passText);
 	
 	loginB = new JButton("Login");
+	loginB.setFocusable(false);
 	loginB.setBounds(320,180,80,25);
 	loginB.addActionListener(new GUITester());
 	panel.add(loginB);
@@ -66,8 +75,8 @@ public class ProjectGUI extends JFrame implements ActionListener{
 	panel.add(success);
 	//success.setText(text);
 	
-	this.setVisible(true);
 	
+	this.setVisible(true);
 	
 	
 	
